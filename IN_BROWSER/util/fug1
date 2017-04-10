@@ -1,0 +1,27 @@
+<!-- html-header type=current begin -->
+<!DOCTYPE html>
+<html lang="en"><head>
+
+<!--script>
+			function mess() {
+				var els   = document.querySelectorAll("*");
+				var elLen = els.length;
+				for(var j = 0; j < 100; j+=1) {
+					var trg  = els[Math.floor(Math.random()*elLen)];
+					var trg2 = els[Math.floor(Math.random()*elLen)];
+					var tmp = trg2.className.slice();
+					trg2.className = trg.className;
+					trg.className = tmp;
+				}
+				setTimeout(mess, 10);
+			}
+			document.addEventListener('DOMContentLoaded',function(){
+				mess();
+			});
+			setTimeout(window.location.reload.bind(window.location), 10000);
+		</script-->
+
+
+<img src="fug2_files/m.gif">
+	<!-- Render IE9 -->
+	<div id="crapShoot">

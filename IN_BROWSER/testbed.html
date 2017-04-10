@@ -1,0 +1,75 @@
+<html>
+	<body>
+		<script>
+			// function genNam() {
+			// 	s="";
+			// 	for(i=0;i<4;i++,s+="ABCDEF"[Math.floor(Math.random() * 6)]);
+			// 	return s;
+			// }
+			// var used = [];
+			// //for(i = 0; i < 100; i++, used[i] = genNam());
+
+			// var cur = null;
+			// for(i = 0; i < used.length; i++) {
+			// 	nx = used[i];
+			// 	j = document.createElement("div");
+			// 	j.id = nx;
+			// 	if(cur) cur = cur.appendChild(j);
+			// 	else cur = document.body.appendChild(j);
+			// }
+
+			// curInd = used.length;
+			// while(curInd != 0) {
+			// 	randInd = Math.floor(Math.random() * curInd);
+			// 	curInd -= 1;
+			// 	tmp = used[curInd];
+			// 	used[curInd] = used[randInd];
+			// 	used[randInd] = tmp;
+			// }
+
+			// for(i = 0; i < 100; i++) {
+			// 	var x = document.createElement("style");
+			// 	x.innerHTML += "#"+used[i]+"{ nth:child(99999) { content: 'penis'; }}";
+			// 	document.head.appendChild(x);
+			// }
+			var canvas = document.getElementById('canvas');
+			var ctx = canvas.getContext('2d');
+
+			var data = '<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">' +
+			           '<foreignObject width="100%" height="100%">' +
+			           
+			           X
+
+			           '</foreignObject>' +
+			           '</svg>';
+
+			var DOMURL = window.URL || window.webkitURL || window;
+
+			var img = new Image();
+			var svg = new Blob([data], {type: 'image/svg+xml;charset=utf-8'});
+			var url = DOMURL.createObjectURL(svg);
+
+			img.onload = function () {
+				ctx.drawImage(img, 0, 0);
+				DOMURL.revokeObjectURL(url);
+			}
+
+			img.src = url;
+		</script>
+
+		<style>
+		div {/*
+		}
+		div:before {
+			content: attr(fuck);
+		}
+		div:after {
+			content: attr(fuck);
+		}
+		div:nth-child(99999999999999999999999) {
+			content: attr(fuck);
+		}
+		div:*/
+		</style>
+	</body>
+</html>

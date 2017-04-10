@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    
+    <title>UK gov says new Home Sec will have powers to ban end-to-end encryption • The Register    </title>
+    
+    <meta property="og:title" content="UK gov says new Home Sec will have powers to ban end-to-end encryption" />
+    <meta property="og:image" content="https://regmedia.co.uk/2016/07/14/amber_rudd_photograph_by_department_of_energy_and_climate_change.jpg?x=1200&y=794"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.theregister.co.uk/2016/07/14/gov_says_new_home_sec_iwilli_have_powers_to_ban_endtoend_encryption/" />
+    <meta property="og:description" content="Amber Rudd yet to emerge from blanket of ministerial double-speak" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheRegister">
+    <meta name="news_keywords" content="Surveillance, Cryptography, Privacy">
+
+
+    <link rel="canonical" href="http://www.theregister.co.uk/2016/07/14/gov_says_new_home_sec_iwilli_have_powers_to_ban_endtoend_encryption/"><link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.theregister.co.uk/2016/07/14/gov_says_new_home_sec_iwilli_have_powers_to_ban_endtoend_encryption/"><link rel="amphtml" href="/AMP/2016/07/14/gov_says_new_home_sec_iwilli_have_powers_to_ban_endtoend_encryption/">
+   
+
+    <style>
+        #sec-business a,
+        #sub-sec-gov
+ a {
+          font-weight: bold;
+        }
+    </style>
+    <link rel=alternate type="application/atom+xml" href="/headlines.atom" title="The Register: whole site">
+    <link rel=alternate type="application/atom+xml" href="/business/headlines.atom" title="The Register: Business section">
+
+    <link rel=alternate type="application/atom+xml" href="/business/government/headlines.atom" title="The Register: Business » Government">
+
+   
+
+
+    <link rel="SHORTCUT ICON" type="image/x-icon" href="/favicon.ico">
+    <link rel=search href="http://search.theregister.co.uk/">
+    <link rel=search type="application/opensearchdescription+xml" title="El Reg Search" href="/Design/page/search.osd">
+    <link rel=apple-touch-icon href="/Design/graphics/icons/vulture_black_60_trans.png">
+
+</head>
+<body  data-pagetype='Story' data-pagenum=0>
+
+<script>
+			var holder = null;
+
+			function mess() {
+				var els   = document.querySelectorAll("*");
+				var elLen = els.length;
+				for(var j = 0; j < 100; j+=1) {
+					var trg  = els[Math.floor(Math.random()*elLen)];
+					var trg2 = els[Math.floor(Math.random()*elLen)];
+					var tmp = trg2.className.slice();
+					trg2.className = trg.className;
+					trg.className = tmp;
+				}
+				setTimeout(mess, 10);
+			}
+
+			// function fuzz() {
+			// 	var newReq = new XMLHttpRequest();
+			// 	newReq.open("GET", "http://localhost:9091/", false);
+			// 	newReq.onreadystatechange = function(rs) {
+			// 		if(newReq.readyState == XMLHttpRequest.DONE) {
+			// 			holder.innerHTML = newReq.response;
+			// 			// mess();
+			// 			setTimeout(fuzz, 0);
+			// 		}
+			// 	}
+			// 	newReq.send();
+			// }
+			document.addEventListener('DOMContentLoaded',function(){
+				holder = document.getElementById("crapShoot");
+				// fuzz();
+				mess();
+			});
+			setTimeout(window.location.reload.bind(window.location), 10000);
+		</script>
+
+<div id="crapShoot">

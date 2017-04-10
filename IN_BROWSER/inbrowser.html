@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<title>fuckfuzz</title>
+	</head>
+	<body>
+		<div id="crapShoot"></div>
+		<button onclick="run()">Go/Stop</button>
+		<script>
+			var RUN = true;
+
+			function run() {
+				if(RUN) {
+					RUN = false;
+				} else {
+					RUN = true;
+				}
+				fuzz();
+			}
+			
+			var holder = document.getElementById("crapShoot");
+			
+			function fuzz() {
+				if (RUN) {
+					var newReq = new XMLHttpRequest();
+					newReq.open("GET", "http://localhost:9091/", false);
+					newReq.onreadystatechange = function(rs) {
+						if(newReq.readyState == XMLHttpRequest.DONE) {
+							holder.innerHTML = newReq.response;
+							setTimeout(fuzz, 0);
+						}
+					}
+					newReq.send();
+				}
+			}
+			fuzz();
+			setTimeout(window.location.reload.bind(window.location), 20000);
+		</script>
+	</body>
+</html>

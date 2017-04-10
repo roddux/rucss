@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<head>
+		<title>RuCSS</title>
+	</head>
+	<body>
+		<!-- dummy content -->
+		<a href="#">a</a><p>asdf</p><b>a</b><h3>ga</h3>
+		<button id="togbtn" onclick="toggle()">Start</button>
+		<script>
+			var head    = document.getElementsByTagName("head")[0];
+			var headc   = head.innerHTML;
+			var tog     = document.getElementById("togbtn");
+			var running = false;
+			var id	    = Math.random();
+			var boiler  = '<link rel="stylesheet" type="text/css" ';
+
+			function toggle() {
+				if(!running) {
+					running=true;
+					togbtn.innerHTML = "Stop";
+				} else {
+					running=false;
+					togbtn.innerHTML = "Start";
+				}
+				go();
+			}
+
+			function go() {
+				if(!running) return;
+				r = Math.random();
+				head.innerHTML = headc;
+				head.innerHTML += boiler + 'href="http://127.0.0.1:8080/id='+id+'&r='+r + '"/>';
+				setTimeout(go, 0);
+			}
+		</script>
+	</body>
+</html>
