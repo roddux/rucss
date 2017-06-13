@@ -15,7 +15,7 @@ elements = ("a", "abbr", "acronym", "address", "applet", "article", "aside",
   "s", "samp", "section", "select", "shadow", "small", "spacer",
 "span", "strike", "strong",  "sub", "summary", "sup", "table", "tbody", "td",
 "template",  "tfoot", "th", "thead", "time",  "tr", "tt", "u", "ul", "var",
-"video", "pre", "svg", "use")#"rt", "ruby", "rp", "rtc",)
+"video", "pre", "svg", "use", "rt", "ruby", "rp", "rtc",)
 
 selfclosers = ("area", "base", "br", "col", "embed", "hr", "img", "input",
 "keygen", "link", "meta", "param",  "source", "track", "wbr")
@@ -188,7 +188,7 @@ def genElements(recurseCount=0):
 			tagName,
 			b"class" if clsId == 1 else b"id",
 			rc(usedClasses).encode("UTF-8") if clsId == 1 else rc(usedIds).encode("UTF-8"),
-			genElements(recurseCount=recurseCount+1) if ri(1,15)==3 and recurseCount<=2 else genContent(),
+			genElements(recurseCount=recurseCount+1) if ri(1,10)==3 and recurseCount<=2 else genContent(),
 			tagName
 		)
 
@@ -212,47 +212,47 @@ def genPart():
 	# else:
 	return genSelector() + "{" + rc(rules) + "}"
 
-existingClasses = [
-	"archives",
-	"benefits",
-	"css-resources",
-	"design-archives",
-	"designer-name",
-	"design-name",
-	"design-selection",
-	"explanation",
-	"extra1",
-	"extra2",
-	"extra3",
-	"extra4",
-	"extra5",
-	"extra6",
-	"indicator",
-	"intro",
-	"main",
-	"next",
-	"page-wrapper",
-	"participation",
-	"preamble",
-	"requirements",
-	"resources",
-	"select",
-	"sidebar",
-	"summary",
-	"supporting",
-	"viewall",
-	"view-css",
-	"wrapper",
-	"zen-accessibility",
-	"zen-faq",
-	"zen-github",
-	"zen-license",
-	"zen-resources",
-	"zen-submit",
-	"zen-translations",
-	"zen-validate-css",
-	"zen-validate-html"
-]
+# existingClasses = [
+# 	"archives",
+# 	"benefits",
+# 	"css-resources",
+# 	"design-archives",
+# 	"designer-name",
+# 	"design-name",
+# 	"design-selection",
+# 	"explanation",
+# 	"extra1",
+# 	"extra2",
+# 	"extra3",
+# 	"extra4",
+# 	"extra5",
+# 	"extra6",
+# 	"indicator",
+# 	"intro",
+# 	"main",
+# 	"next",
+# 	"page-wrapper",
+# 	"participation",
+# 	"preamble",
+# 	"requirements",
+# 	"resources",
+# 	"select",
+# 	"sidebar",
+# 	"summary",
+# 	"supporting",
+# 	"viewall",
+# 	"view-css",
+# 	"wrapper",
+# 	"zen-accessibility",
+# 	"zen-faq",
+# 	"zen-github",
+# 	"zen-license",
+# 	"zen-resources",
+# 	"zen-submit",
+# 	"zen-translations",
+# 	"zen-validate-css",
+# 	"zen-validate-html"
+# ]
 
 # existingClasses = [
 # 	"janrainShareContactSearchResults",
@@ -637,23 +637,24 @@ existingClasses = [
 # 	"foot_desc",
 # ]
 
-# usedIds      = ["A","B","C","D","E","F","G","H","I"]
-
-existingIds = [
-	"css-zen-garden",
-	"zen-intro",
-	"crapShoot",
-	"zen-summary",
-	"zen-preamble",
-	"zen-supporting",
-	"zen-explanation",
-	"zen-participation",
-	"zen-benefits",
-	"zen-requirements",
-	"design-selection",
-	"design-archives",
-	"zen-resources"
-]
+usedIds      = ["A","B","C","D","E","F","G","H","I"]
+existingClasses      = ["A","B","C","D","E","F","G","H","I"]
+existingIds = existingClasses	
+# existingIds = [
+# 	"css-zen-garden",
+# 	"zen-intro",
+# 	"crapShoot",
+# 	"zen-summary",
+# 	"zen-preamble",
+# 	"zen-supporting",
+# 	"zen-explanation",
+# 	"zen-participation",
+# 	"zen-benefits",
+# 	"zen-requirements",
+# 	"design-selection",
+# 	"design-archives",
+# 	"zen-resources"
+# ]
 
 usedClasses  = existingClasses
 # usedClasses  = existingClasses+["A","B","C","D","E","F","G","H","I"]
@@ -678,8 +679,8 @@ def genBad():
 		headString += "</style>"
 	headString = headString.encode("UTF-8")
 
-	# return b"<style>*{transition:all 1ms;}</style>"+headString+divString
-	return b"<style>*{transition:all 1ms;}</style>"+headString
+	return b"<style>*{transition:all 1ms;}</style>"+headString+divString
+	# return b"<style>*{transition:all 1ms;}</style>"+headString
 	# return headString
 
 if __name__ == "__main__":

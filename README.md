@@ -1,3 +1,8 @@
+# PROJECT ABANDONED
+This project is abandonware since I'm now focusing on other fuzzing ideas.
+Primarily looking at in-browser fuzzing with the likes of Framboise/Octo by
+@posidron of the Mozilla security team.
+
 # RuCSS : A CSS fuzzer with test generator and a web wrapper
 ---
 This is yet another fuzzer aimed at blowing holes in Firefox and Chromium.
